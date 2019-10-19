@@ -1,2 +1,2 @@
-# Design Patterns in PHP
+# Strategy Pattern in PHP
 Different design patterns implementation in PHP
