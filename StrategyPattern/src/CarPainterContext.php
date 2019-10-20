@@ -20,7 +20,7 @@ final class CarPainterContext
     public function paintMe(string $color)
     {
         $this->setStrategy($color);
-        $this->processStrategy();
+        $this->applyStrategy();
     }
 
     private function setStrategy(string $color): void
@@ -38,8 +38,8 @@ final class CarPainterContext
         }
     }
 
-    private function processStrategy(): void
+    private function applyStrategy(): void
     {
-        echo $this->strategy->paint();
+        (new CarPainter())->paintMe($this->strategy);
     }
 }
